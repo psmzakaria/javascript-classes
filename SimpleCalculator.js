@@ -2,26 +2,31 @@ class SimpleCalculator {
   constructor(value) {
     this.value = value;
   }
-  add(n) {
+  getAdd(n) {
     this.value = this.value + n;
-    return this
+    return this;
   }
 
-  subtract(n) {
+  getSubtract(n) {
     this.value = this.value - n;
-    return this
+    return this;
   }
-  multiply(n) {
+  getMultiply(n) {
     this.value = this.value * n;
-    return this
+    return this;
   }
 
-  divide(n) {
+  getDivide(n) {
     this.value = this.value / n;
-    return this
+    return this;
   }
 }
 
 const calc5 = new SimpleCalculator(5);
-console.log(calc5.add(15).subtract(10).multiply(20));
-console.log(calc5.value)
+console.log(
+  calc5
+    .getAdd(15)
+    .getSubtract(10)
+    .getMultiply(20)
+);
+console.log(calc5.value);
